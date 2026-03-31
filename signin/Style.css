@@ -16,6 +16,7 @@ Body{
 	backdrop-filter: blur(10px);
     width: 30%;
     height: 50%;
+	max-height: 400px;
     margin: 80px 30%;
     border-radius: 20px;
 	padding:5%;
@@ -31,7 +32,7 @@ Body{
 	
 .input-box input{
 	padding:15px;
-	width:100%;
+	width:90%;
 	border-radius:20px;
 	border:0;
 	Background:rgb(255,255,255,0.2);
@@ -51,7 +52,7 @@ button{
 	margin-top:30px;
 	margin-left:40%;
 	text-align:center;
-	padding:3%;
+	padding: 3%;
 	border-radius:50px;
 	border:0;
 	Background:rgb(255,255,255,0.2);
@@ -76,4 +77,29 @@ button:hover{
 	transform: scale(1.06);
 	transition: background-color 0.3s ease, transform 0.2s ease-in-out;
 
+}
+@media screen and (max-width:756px)
+{
+	body{
+		background-image: url(mobile-bg.png);
+		
+		padiing:0;
+	}
+	.container{
+		height: 55%;
+		max-height: 400px;
+		margin-left: 20%;
+		width: 90%;
+		max-width:300px;
+		padding-right: 60px;
+
+	}
+	.containor h3{
+		text-align: center;
+	}
+	.input-box{
+
+		font-size: 16px;
+		padding: 15px 20px;
+	}
 }

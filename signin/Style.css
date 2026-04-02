@@ -87,57 +87,58 @@ button:hover{
 }
 
 /* 📱 Mobile (small phones) */
-@media (max-width: 480px) {
-    .container {
-        width: 90%;
-        height: auto;
-        padding: 20px;
-    }
+@media screen and (min-width: 1017px) {
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #f7b733, #fc4a1a);
+    position: relative;
+    overflow: hidden;
+  }
 
-    .container h3 {
-        font-size: 24px;
-    }
+  body::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    background: #ffffff;
+    border-radius: 50%;
+    top: -100px;
+    right: -100px;
+    opacity: 0.6;
+  }
 
-    .input-box input {
-        padding: 12px;
-        width: 100%;
-    }
-
-    button {
-        width: 60%;
-        margin-left: 20%;
-        padding: 10px;
-    }
+  body::after {
+    content: "";
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    bottom: -200px;
+    left: -200px;
+  }
+  .container {
+    width: 40%;
+    max-width: 500px;
+    height: auto;
+    box-shadow: 0px 0px 30px 20px whitesmoke;
+  }
+  .container input[type="text"],
+  .container input[type="email"],
+  .container input[type="password"] {
+    display: flex;
+  }
 }
-
-/* 📱 Tablets */
-@media (min-width: 481px) and (max-width: 768px) {
-    .container {
-        width: 70%;
-        height: auto;
-    }
-
-    button {
-        width: 40%;
-        margin-left: 30%;
-    }
-}
-
-/* 💻 Small laptops */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .container {
-        width: 50%;
-    }
-
-    button {
-        width: 30%;
-        margin-left: 35%;
-    }
-}
-
-/* 🖥️ Large screens */
-@media (min-width: 1025px) {
-    .container {
-        width: 30%;
-    }
+@media screen and (min-width: 614px) {
+  .container {
+    width: 50%;
+    max-width: 400px;
+    margin-top: -3%;
+  }
+  .container input[type="text"],
+  .container input[type="email"],
+  .container input[type="password"] {
+    width: 80%;
+  }
 }
